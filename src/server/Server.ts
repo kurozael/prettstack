@@ -7,25 +7,27 @@ class Server {
 
     public constructor() {
         const bundler = new Bundler(path.join(__dirname, "../client/index.html"), {
-            watch: true
+            watch: true,
         });
 
         this._express = express();
-        this._express.use(bundler.middleware());
-        this._express.use(express.urlencoded({
-            extended: true
-        }));
+        this._express.use(
+            express.urlencoded({
+                extended: true,
+            }),
+        );
         this._express.use(express.json());
+
+        this.addRoutes();
+
+        this._express.use(bundler.middleware());
     }
 
     public start(port: number): void {
-        this.addRoutes();
         this._express.listen(port);
     }
 
-    private addRoutes(): void {
-        
-    }
+    private addRoutes(): void {}
 }
 
 export default Server;

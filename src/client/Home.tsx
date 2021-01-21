@@ -1,13 +1,9 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
-interface IHomeProps extends RouteComponentProps {
+type IHomeProps = RouteComponentProps;
 
-}
-
-interface IHomeState {
-
-}
+interface IHomeState {}
 
 class Home extends React.Component<IHomeProps, IHomeState> {
     public constructor(props: IHomeProps) {
@@ -15,11 +11,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     }
 
     public render(): JSX.Element {
-        return (
-            <div>
-                Hello, world.
-            </div>
-        );
+        return <div>Hello, world.</div>;
     }
 }
 
