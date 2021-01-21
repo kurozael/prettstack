@@ -1,5 +1,7 @@
 # 🧰 prettstack
 
+![Travis](https://travis-ci.org/kurozael/prettstack.svg?branch=main])
+
 Minimal **Parcel + React + Express + TypeScript + Tailwind** Starter Kit
 
 ## 🛠️ Installation
